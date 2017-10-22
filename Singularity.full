@@ -18,13 +18,19 @@ From: ubuntu:16.04
     cd gromacs-5.1.4
     mkdir build
     cd build 
-    cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DGMX_MPI=on 
--DGMX_MPI=on 
+    cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON 
     make
     make check
+    make install
+    cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DGMX_MPI=on -DGMX_MPI=on
+    make
+    make check
+    make install
+    
 
 %environment
     export LC_ALL=C
-    export PATH=/usr/local/gromacs/bin:$PATH
+    export PATH=/opt//games:$PATH
 
 %runscript
+    fortune | cowsay | lolcat
