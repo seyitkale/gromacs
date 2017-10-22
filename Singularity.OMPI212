@@ -5,7 +5,7 @@ From: ubuntu:16.04
     apt-get -y update
     apt-get -y install build-essential wget cmake ibutils libibverbs-dev ibverbs-utils  libibverbs1 libsysfs2 libsysfs-dev
 
-    wget https://www.open-mpi.org/software/ompi/v3.0/downloads/openmpi-3.0.0.tar.bz2
+    wget https://www.open-mpi.org/software/ompi/v3.0/downloads/openmpi-2.1.2.tar.bz2
     tar -xjf openmpi-2.1.2.tar.bz2
     cd openmpi-2.1.2 
     ./configure --prefix=/usr/local --with-hwloc --with-verbs
