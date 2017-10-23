@@ -3,7 +3,7 @@ From: ubuntu:16.04
 
 %post
     apt-get -y update
-    apt-get -y install build-essential wget cmake ibutils libibverbs-dev ibverbs-utils  libibverbs1 libsysfs2 libsysfs-dev
+    apt-get -y install build-essential wget cmake libmlx4-1 ibutils libibverbs-dev ibverbs-utils  libibverbs1 libsysfs2 libsysfs-dev
 
     wget https://www.open-mpi.org/software/ompi/v3.0/downloads/openmpi-3.0.0.tar.bz2
     tar -xjf openmpi-3.0.0.tar.bz2
