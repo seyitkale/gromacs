@@ -13,7 +13,7 @@ From: ubuntu:16.04
     make install
     ldconfig
 
-    wget https://drive.google.com/file/d/1mjL0f1ZqdGccJoD5_y2w3mvA276pHGE_/view?usp=drive_web
+    wget https://github.com/plumed/plumed2
     tar zxf plumed-2.3.6.tgz
     cd plumed-2.3.6
     ./configure --prefix=/usr/local
