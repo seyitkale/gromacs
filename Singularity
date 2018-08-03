@@ -13,12 +13,20 @@ From: ubuntu:16.04
     make install
     ldconfig
 
+    wget https://drive.google.com/file/d/1mjL0f1ZqdGccJoD5_y2w3mvA276pHGE_/view?usp=drive_web
+    tar zxf plumed-2.3.6.tgz
+    cd plumed-2.3.6
+    ./configure --prefix=/usr/local
+    make -j 4
+    make doc
+    make install
+    
     wget http://ftp.gromacs.org/pub/gromacs/gromacs-5.1.4.tar.gz
     tar zxf gromacs-5.1.4.tar.gz
     cd gromacs-5.1.4
     mkdir build
     cd build 
-    cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DCMAKE_INSTALL_PREFIX=/usr/local
+    cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_SHARED_LIBS=OFF -DGMX_PREFER_STATIC_LIBS=ON
     make
     make check
     make install
@@ -27,6 +35,7 @@ From: ubuntu:16.04
     make check
     make install
     
+    mkdir /gpfs /spin1 /gs2 /gs3 /gs4 /gs5 /gs6 /gs7 /gs8 /data /scratch /fdb /lscratch /scratch
 
 %environment
     export LC_ALL=C
